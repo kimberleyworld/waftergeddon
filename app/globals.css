@@ -16,6 +16,29 @@
   color: var(--goth-red) !important;
 }
 
+/* Floating stuff animation */
+@keyframes float {
+  0% { 
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(3px) translateY(-2px);
+  }
+  50% { 
+    transform: translateX(0px) translateY(-4px);
+  }
+  75% {
+    transform: translateX(-3px) translateY(-2px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+.floating-stuff {
+  animation: float 3s ease-in-out infinite;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
