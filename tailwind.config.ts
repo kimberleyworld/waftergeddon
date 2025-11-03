@@ -13,8 +13,9 @@ const config: Config = {
         'sans': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
       },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: " #0a0909",
+        foreground: "#bcbea8",
+        gothRed: "#ba3626"
       },
     },
   },
