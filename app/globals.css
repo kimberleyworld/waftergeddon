@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0909;
+  --foreground: #bcbea8;
+  --goth-red: #ba3626;
 }
 
 /* Direct CSS class for Cloister Black */
@@ -10,20 +11,42 @@
   font-family: "Cloister Black", serif !important;
 }
 
-/* Explicit font classes for debugging */
-.font-cloister-test {
-  font-family: 'Cloister Black', 'Old English Text MT', serif !important;
+/* Maintainable gothic red class */
+.text-gothic-red {
+  color: var(--goth-red) !important;
 }
 
-.font-sans-test {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+/* Force h2 elements to use Helvetica Neue */
+h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Navigation active state */
+.nav-active {
+  color: var(--goth-red) !important;
+}
+
+/* Floating stuff animation */
+@keyframes float {
+  0% { 
+    transform: translateX(0px) translateY(0px);
   }
+  25% {
+    transform: translateX(3px) translateY(-2px);
+  }
+  50% { 
+    transform: translateX(0px) translateY(-4px);
+  }
+  75% {
+    transform: translateX(-3px) translateY(-2px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+.floating-stuff {
+  animation: float 3s ease-in-out infinite;
 }
 
 body {
