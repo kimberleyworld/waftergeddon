@@ -13,13 +13,13 @@ export default function Informations() {
         <div className="mb-4">
           <h3 className="text-m font-semibold mb-1">By Car:</h3>
           <p className='text-sm'>Follow the south lodge postcode TA24 72B which will take you to the front drive entrance.</p>
-          <p className='text-sm'>Please update the <a href="https://docs.google.com/spreadsheets/d/1HuszOMvBX-YRuoE6pb5Up6Bj65BY3gTHHn0NPcIIH-c/edit?gid=0#gid=0" className='underline font-bold'>liftshare</a> spreadsheet if you haven’t already!</p>
+          <p className='text-sm'>Please update the <a href="https://docs.google.com/spreadsheets/d/1HuszOMvBX-YRuoE6pb5Up6Bj65BY3gTHHn0NPcIIH-c/edit?gid=0#gid=0" className='underline font-bold' target="_blank" rel="noopener noreferrer">liftshare</a> spreadsheet if you haven't already!</p>
         </div>
 
         <div className="mb-4">
           <h3 className="text-m font-semibold mb-1">Train:</h3>
           <p className='text-sm'>Nearest train station is Taunton, which is about 45 mins drive away. You can then get a bus from Taunton to Minehead.  
-            <a href="https://www.knowlemanor.co.uk/how-to-find-us/" className="underline font-bold block mt-1">
+            <a href="https://www.knowlemanor.co.uk/how-to-find-us/" className="underline font-bold block mt-1" target="_blank" rel="noopener noreferrer">
             how to find us
             </a>
           </p>
@@ -88,7 +88,7 @@ export default function Informations() {
       </InfoSection>
 
       <InfoSection title="Room allocation">
-        <p className='text-sm'>Rooms have been pre-allocated <a href="#" className='underline font-bold'>HERE</a> - feel free to swap with people if you wish.</p>
+        <p className='text-sm'>Rooms have been pre-allocated <a href="https://docs.google.com/spreadsheets/d/1aHd6N79jtOgFeBuoes1uCsV8nmHUAIqKiUJcEo1nKqc/edit?usp=sharing" className='underline font-bold' target="_blank" rel="noopener noreferrer">HERE</a> - feel free to swap with people if you wish.</p>
       </InfoSection>
 
       <InfoSection title="Venue rules">
