@@ -1,6 +1,11 @@
 'use client';
 
+import { useRouter, usePathname } from 'next/navigation';
+
 export default function Navigation() {
+  const router = useRouter();
+  const pathname = usePathname();
+  
   const menuItems = [
     { name: 'Times', href: '#timetable' },
     { name: 'Info', href: '#info' },
@@ -9,10 +14,19 @@ export default function Navigation() {
 
   const handleNavClick = (href: string) => {
     if (href.startsWith('#')) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      // If we're not on the main page, navigate there first
+      if (pathname !== '/') {
+        router.push('/' + href);
+      } else {
+        // We're on the main page, just scroll
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
       }
+    } else {
+      // For full page routes, use router.push
+      router.push(href);
     }
   };
 
