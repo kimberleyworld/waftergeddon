@@ -12,8 +12,8 @@ export default function ConfessionsPage() {
             height={50}
             className="mx-auto floating-stuff"
           />
-          <h1 className="font-cloister text-6xl text-foreground mt-8 mb-8">
-            Confessions Coming Soon
+          <h1 className="font-cloister text-6xl text-foreground mt-6 mb-8">
+            Confessions Booth Coming Soon
           </h1>
           <Image
             src="/images/arrow.png"
