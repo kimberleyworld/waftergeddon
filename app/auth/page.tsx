@@ -9,13 +9,13 @@ export default function AuthPage() {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center">
-      <div className="max-w-md w-full p-8">
+      <div className="max-w-md w-full p-8 ">
         <Image
           src="/images/cat.png"
           alt="Cat"
-          width={300}
-          height={300}
-          className="mx-auto mb-4"
+          width={200}
+          height={200}
+          className="mx-auto mb-4 floating-stuff"
         />
         <div className="text-center mb-4">
           <h1 className="font-cloister text-6xl text-foreground mb-2">
