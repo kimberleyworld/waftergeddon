@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import TimeTables from './components/timeTable/TimeTables';
+import Informations from './components/info/Informations';
 
 export default function Home() {
   return (
@@ -58,7 +59,7 @@ export default function Home() {
 
       {/* Info */}
       <section className="flex flex-col items-center justify-center bg-background text-foreground px-4 py-8">
-        INFO
+        <Informations />
       </section>
     </div>
   );

@@ -8,9 +8,9 @@ export default function TimeTables() {
 
   return (
     <div className="p-4 bg-background text-foreground w-full">
-      <div className="flex justify-center items-center gap-8 mb-4
-      ">
-        <h2 
+      <h1 className="text-4xl font-cloister text-center mb-6">Timetable</h1>
+      <div className="flex justify-center items-center gap-8 mb-4">
+        <h2
           className={`text-3xl font-bold cursor-pointer transition-colors ${
             selectedDay === 'friday' ? 'text-gothRed' : 'text-foreground hover:text-gothRed'
           }`}

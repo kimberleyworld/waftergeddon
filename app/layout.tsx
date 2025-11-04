@@ -18,7 +18,7 @@ export default function RootLayout({
         <link href="https://fonts.cdnfonts.com/css/cloister-black" rel="stylesheet" />
       </head>
       <body className="antialiased font-sans">
-        {/* <Navigation /> */}
+         <Navigation /> 
         {children}
       </body>
     </html>

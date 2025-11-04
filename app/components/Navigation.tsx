@@ -7,7 +7,8 @@ export default function Navigation() {
   const pathname = usePathname();
   
   const menuItems = [
-    { name: 'Home', href: '/' },
+    { name: 'Times', href: '/' },
+    { name: 'Info', href: '/info' },
     { name: 'Confessions', href: '/confessions' },
   ];
 
