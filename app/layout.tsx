@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata = {
   metadataBase: new URL(process.env.NODE_ENV === 'production' 
-    ? 'https://waftergeddon.vercel.app' // Replace with your actual domain
+    ? 'https://www.waftergeddon.com/'
     : 'http://localhost:3000'
   ),
   title: 'Waftergeddon',
@@ -13,7 +13,7 @@ export const metadata = {
     description: 'Info for attendees of Waftergeddon 2025 and a place to confess your sins',
     images: [
       {
-        url: '/pinkCastle.png',
+        url: '/images/hell.png',
         width: 1200,
         height: 630,
         alt: 'Waftergeddon Event',
