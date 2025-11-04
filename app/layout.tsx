@@ -25,7 +25,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Waftergeddon',
     description: 'Info for attendees of Waftergeddon 2025 and a place to confess your sins',
-    images: ['/pinkCastle.png'],
+    images: ['/images/pinkCastle.png'],
   },
 }
 
