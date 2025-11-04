@@ -7,10 +7,10 @@ export const metadata = {
     : 'http://localhost:3000'
   ),
   title: 'Waftergeddon',
-  description: 'Confessions and events',
+  description: 'Info for attendees of Waftergeddon 2025 and a place to confess your sins',
   openGraph: {
     title: 'Waftergeddon',
-    description: 'Confessions and events',
+    description: 'Info for attendees of Waftergeddon 2025 and a place to confess your sins',
     images: [
       {
         url: '/pinkCastle.png',
@@ -24,7 +24,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Waftergeddon',
-    description: 'Confessions and events',
+    description: 'Info for attendees of Waftergeddon 2025 and a place to confess your sins',
     images: ['/pinkCastle.png'],
   },
 }
