@@ -7,8 +7,8 @@ export default function TimeTables() {
   const [selectedDay, setSelectedDay] = useState<'friday' | 'saturday'>('friday');
 
   return (
-    <div className="p-4 bg-background text-foreground w-full mt-8">
-      <h1 className="text-4xl font-cloister text-center mb-4">Timetable</h1>
+    <div className="p-4 bg-background text-foreground w-full mt-15">
+      <h1 className="text-6xl font-cloister text-center mb-4">Timetable</h1>
       <div className="flex justify-center items-center mb-4">
         <h2
           className={`text-lg cursor-pointer px-4 text-foreground transition-all ${

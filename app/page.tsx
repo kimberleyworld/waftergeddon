@@ -8,7 +8,7 @@ export default function Home() {
       {/* First section - Hero with castle */}
       <section className="h-screen flex flex-col items-center justify-center bg-background relative">
         {/* Image */}
-        <div className="relative flex-shrink-0">
+        <div className="relative flex-shrink-0 mt-20">
           <Image
             src="/images/pinkCastle.png"        
             alt="Boat man illustration"
@@ -40,7 +40,7 @@ export default function Home() {
       </section>
 
       {/* Timetable */}
-      <section id="timetable" className="flex items-start justify-start bg-background mt-8">
+      <section id="timetable" className="flex items-start justify-start bg-background">
         <TimeTables />
       </section>
 
