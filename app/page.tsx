@@ -14,14 +14,14 @@ export default function Home() {
             alt="Boat man illustration"
             width={400}
             height={300}
-            className="floating-stuff rounded-lg h-auto mx-auto w-4/5 md:w-3/5 lg:w-2/5"
+            className="floating-stuff rounded-lg h-auto mx-auto w-4/5 md:w-3/5 lg:w-3/5 xl:w-2/3"
           />
         </div>
 
         {/* Content below image */}
         <div className="flex flex-col items-center justify-center">
           <div className="text-center max-w-4xl">
-            <h1 className="font-cloister text-6xl mt-8">
+            <h1 className="font-cloister text-6xl md:text-7xl lg:text-8xl xl:text-9xl mt-8">
               Waftergeddon
             </h1>
             
@@ -45,20 +45,20 @@ export default function Home() {
       </section>
 
       {/* Image break */}
-      <section className="flex flex-col items-center justify-center bg-background relative mt-10 mb-8">
+      <section className="flex flex-col items-center justify-center bg-background relative mt-15 mb-8">
         <div className="relative flex-shrink-0">
           <Image
             src="/images/boatMan.png"
             alt="Boat"
             width={400}
             height={300}
-            className="floating-stuff rounded-lg h-auto mx-auto w-4/5 md:w-3/5 lg:w-2/5"
+            className="floating-stuff rounded-lg h-auto mx-auto w-4/5 md:w-3/5 lg:w-4/5"
           />
         </div>
       </section>
 
       {/* Info */}
-      <section id="info" className="flex flex-col items-center justify-center bg-background text-foreground px-4 py-8">
+      <section id="info" className="flex flex-col items-center justify-center bg-background text-foreground px-4">
         <Informations />
       </section>
 
