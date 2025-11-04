@@ -1,4 +1,4 @@
-import Navigation from "./components/Navigation";
+import ConditionalNavigation from "./components/ConditionalNavigation";
 import "./globals.css";
 
 export const metadata = {
@@ -43,7 +43,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/images/favicon.svg" sizes="180x180" />
       </head>
       <body className="antialiased font-sans">
-         <Navigation /> 
+         <ConditionalNavigation /> 
         {children}
       </body>
     </html>
