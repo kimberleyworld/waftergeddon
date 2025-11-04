@@ -3,7 +3,7 @@ import InfoSection from './InfoSectionComponent';
 export default function Informations() {
   return (
     <div className="max-w-4xl mx-auto p-4 space-y-8">
-      
+      <h1 className="text-6xl font-cloister text-center mb-4">Information</h1>
       <InfoSection title="Address">
         <div className="text-center mb-4">
           <p>Knowle Manor</p>
@@ -18,7 +18,7 @@ export default function Informations() {
         <div className="mb-4">
           <h3 className="text-m font-semibold mb-1">Train:</h3>
           <p className='text-sm'>Nearest train station is Taunton, which is about 45 mins drive away. You can then get a bus from Taunton to Minehead.  
-            <a href="https://www.knowlemanor.co.uk/how-to-find-us/" className="text-gothRed underline block mt-1">
+            <a href="https://www.knowlemanor.co.uk/how-to-find-us/" className="underline block mt-1">
             how to find us
             </a>
           </p>

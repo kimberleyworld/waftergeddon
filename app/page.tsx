@@ -40,16 +40,16 @@ export default function Home() {
       </section>
 
       {/* Timetable */}
-      <section className="flex items-start justify-start bg-background mt-8">
+      <section id="timetable" className="flex items-start justify-start bg-background mt-8">
         <TimeTables />
       </section>
 
       {/* Image break */}
-      <section className="flex flex-col items-center justify-center bg-background relative mt-8 mb-8">
+      <section className="flex flex-col items-center justify-center bg-background relative mt-10 mb-8">
         <div className="relative flex-shrink-0">
           <Image
             src="/images/boatMan.png"
-            alt="Waftergeddon Boat"
+            alt="Boat"
             width={400}
             height={300}
             className="floating-stuff rounded-lg h-auto mx-auto w-4/5 md:w-3/5 lg:w-2/5"
@@ -58,9 +58,23 @@ export default function Home() {
       </section>
 
       {/* Info */}
-      <section className="flex flex-col items-center justify-center bg-background text-foreground px-4 py-8">
+      <section id="info" className="flex flex-col items-center justify-center bg-background text-foreground px-4 py-8">
         <Informations />
       </section>
+
+      {/* Image break */}
+      <section className="flex flex-col items-center justify-center bg-background relative mb-8">
+        <div className="relative flex-shrink-0">
+          <Image
+            src="/images/cat.png"
+            alt="Cat"
+            width={400}
+            height={300}
+            className="floating-stuff h-auto mx-auto w-4/5 md:w-3/5 lg:w-2/5"
+          />
+        </div>
+      </section>
+
     </div>
   );
 }
