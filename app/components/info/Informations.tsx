@@ -11,14 +11,15 @@ export default function Informations() {
         </div>
 
         <div className="mb-4">
-          <h3 className="text-m font-semibold mb-1">For sat navs:</h3>
+          <h3 className="text-m font-semibold mb-1">By Car:</h3>
           <p className='text-sm'>Follow the south lodge postcode TA24 72B which will take you to the front drive entrance.</p>
+          <p className='text-sm'>Please update the <a href="https://docs.google.com/spreadsheets/d/1HuszOMvBX-YRuoE6pb5Up6Bj65BY3gTHHn0NPcIIH-c/edit?gid=0#gid=0" className='underline font-bold'>liftshare</a> spreadsheet if you haven’t already!</p>
         </div>
 
         <div className="mb-4">
           <h3 className="text-m font-semibold mb-1">Train:</h3>
           <p className='text-sm'>Nearest train station is Taunton, which is about 45 mins drive away. You can then get a bus from Taunton to Minehead.  
-            <a href="https://www.knowlemanor.co.uk/how-to-find-us/" className="underline block mt-1">
+            <a href="https://www.knowlemanor.co.uk/how-to-find-us/" className="underline font-bold block mt-1">
             how to find us
             </a>
           </p>
@@ -26,8 +27,12 @@ export default function Informations() {
         
         <div className="mb-4">
           <h3 className="text-m font-semibold mb-1">Parking</h3>
-          <p className='text-sm'>There&apos;s a large car park at the Manor.</p>
-          <p className="italic text-sm">Vans - any guidance for people sleeping?</p>
+          <p className='text-sm'>There’s a large car park at the Manor on the right at the end of the driveway.</p>
+        </div>
+
+        <div className="mb-4">
+          <h3 className="text-m font-semibold mb-1">Van dwellers</h3>
+          <p className='text-sm'>We’re not supposed to have people sleeping in vans here so please try and be discreet about the fact you’re sleeping in your van.</p>
         </div>
         
         <div>
@@ -83,7 +88,7 @@ export default function Informations() {
       </InfoSection>
 
       <InfoSection title="Room allocation">
-        <p className='text-sm'>Rooms have been pre-allocated - feel free to swap with people if you wish.</p>
+        <p className='text-sm'>Rooms have been pre-allocated <a href="#" className='underline font-bold'>HERE</a> - feel free to swap with people if you wish.</p>
       </InfoSection>
 
       <InfoSection title="Venue rules">
@@ -94,7 +99,9 @@ export default function Informations() {
 
         <div className="mb-4">
           <h3 className="text-m font-semibold mb-1">Venue staff & noise:</h3>
-          <p className='text-sm'>The owners live next door. They hopefully won&apos;t be coming inside the venue, but please be discreet with stuff, & keep noise outside (smokers / vans) to a minimum at night.</p>
+          <p className='text-sm mb-1'>The owners live next door. They hopefully won&apos;t be coming inside the venue, but please be discreet with stuff, & keep noise outside (smokers / vans) to a minimum at night.</p>
+          <p className='text-sm mb-1 font-bold'>Please keep windows and doors to outside closed after midnight. This is the only restriction we have on sound - please keep to it so we don’t have to turn the music down or off.</p>
+          <p className='text-sm mb-1'>No problem to go outside to smoke, but please close the door behind you.</p>
         </div>
 
         <p className='text-sm'>Respect the place, help us keep it tidy, have fun ♡</p>
