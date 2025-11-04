@@ -22,7 +22,7 @@ export default function AuthPage() {
             Waftergeddon
           </h1>
           <p className="text-foreground/70 text-sm">
-            This is a private event. Please enter the password to continue.
+            Please enter the password to continue.
           </p>
         </div>
 
