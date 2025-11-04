@@ -13,7 +13,7 @@ const config: Config = {
         'sans': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
       },
       colors: {
-        background: " #0a0909",
+        background: "#0a0909",
         foreground: "#bcbea8",
         gothRed: "#ba3626"
       },

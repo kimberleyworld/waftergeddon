@@ -11,6 +11,11 @@
   font-family: "Cloister Black", serif !important;
 }
 
+/* Maintainable gothic red class */
+.text-gothic-red {
+  color: var(--goth-red) !important;
+}
+
 /* Force h2 elements to use Helvetica Neue */
 h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;

@@ -8,10 +8,10 @@ export default function TimeTables() {
 
   return (
     <div className="p-4 bg-background text-foreground w-full">
-      <h1 className="text-4xl font-cloister text-center mb-6">Timetable</h1>
-      <div className="flex justify-center items-center gap-8 mb-4">
+      <h1 className="text-4xl font-cloister text-center mb-4">Timetable</h1>
+      <div className="flex justify-center items-center mb-4">
         <h2
-          className={`text-3xl font-bold cursor-pointer transition-colors ${
+          className={`text-lg cursor-pointer px-6 ${
             selectedDay === 'friday' ? 'text-gothRed' : 'text-foreground hover:text-gothRed'
           }`}
           onClick={() => setSelectedDay('friday')}
@@ -19,7 +19,7 @@ export default function TimeTables() {
           Friday
         </h2>
         <h2 
-          className={`text-3xl font-bold cursor-pointer transition-colors ${
+          className={`text-lg cursor-pointer px-6 ${
             selectedDay === 'saturday' ? 'text-gothRed' : 'text-foreground hover:text-gothRed'
           }`}
           onClick={() => setSelectedDay('saturday')}
