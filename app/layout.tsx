@@ -13,7 +13,7 @@ export const metadata = {
     description: 'Info for attendees of Waftergeddon 2025 and a place to confess your sins',
     images: [
       {
-        url: '/pinkCastle.png',
+        url: '/images/pinkCastle.png',
         width: 1200,
         height: 630,
         alt: 'Waftergeddon Event',
@@ -25,7 +25,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Waftergeddon',
     description: 'Info for attendees of Waftergeddon 2025 and a place to confess your sins',
-    images: ['/pinkCastle.png'],
+    images: ['/images/pinkCastle.png'],
   },
 }
 
