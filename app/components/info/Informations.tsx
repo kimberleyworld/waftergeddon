@@ -127,15 +127,15 @@ export default function Informations() {
       <div className="border-t-[0.1px] border-foreground"></div>
 
       <InfoSection title="Venue rules">
-        <div className="mb-4">
+        <div className="mb-6">
           <h3 className="text-m font-semibold mb-1">Swimming pool:</h3>
           <p className='text-sm'>Strictly no drinks or glass in the pool area please! The pool is open 8am to 8pm.</p>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-6">
           <h3 className="text-m font-semibold mb-1">Venue staff & noise:</h3>
-          <p className='text-sm mb-1'>The owners live next door. They hopefully won&apos;t be coming inside the venue, but please be discreet with stuff, & keep noise outside (smokers / vans) to a minimum at night.</p>
-          <p className='text-sm mb-1 font-bold'>Please keep windows and doors to outside closed after midnight. This is the only restriction we have on sound - please keep to it so we don’t have to turn the music down or off.</p>
+          <p className='text-sm mb-6'>The owners live next door. They hopefully won&apos;t be coming inside the venue, but please be discreet with stuff, & keep noise outside (smokers / vans) to a minimum at night.</p>
+          <p className='text-sm mb-6 font-bold'>Please keep windows and doors to outside closed after midnight. This is the only restriction we have on sound - please keep to it so we don’t have to turn the music down or off.</p>
           <p className='text-sm mb-1'>No problem to go outside to smoke, but please close the door behind you.</p>
         </div>
 
