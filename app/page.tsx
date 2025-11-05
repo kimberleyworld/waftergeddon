@@ -45,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* Image break */}
-      <section className="flex flex-col items-center justify-center bg-background relative mt-15 mb-8">
+      <section className="flex flex-col items-center justify-center bg-background relative mt-15">
         <div className="relative flex-shrink-0">
           <Image
             src="/images/boatMan.png"
