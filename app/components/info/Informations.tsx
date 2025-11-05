@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Informations() {
   return (
     <div className="max-w-2xl lg:max-w-3xl mx-auto p-4">
-      <h1 className="text-6xl font-cloister text-center mb-1 mt-15">Information</h1>
+      <h1 className="text-6xl font-cloister text-center mt-15 mb-4">Information</h1>
 
       <div className="border-t-[0.1px] border-foreground"></div>
 
