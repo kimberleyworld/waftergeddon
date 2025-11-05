@@ -5,8 +5,8 @@ interface InfoSectionProps {
 
 export default function InfoSection({ title, children }: InfoSectionProps) {     
   return (        
-    <div className="mb-8 bg-background text-foreground">
-      <h2 className="text-3xl font-bold mb-4 font-cloister flex items-center text-center justify-center">
+    <div className="mb-20 mt-18 bg-background text-foreground">
+      <h2 className="text-3xl font-bold mb-8 font-cloister flex items-center text-center justify-center">
         <span className="mr-2 text-gothic-red">⟡</span>
         {title}
         <span className="ml-2 text-gothic-red">⟡</span>
