@@ -1,20 +1,16 @@
 import { prisma } from '@/lib/prisma'
-import Image from 'next/image'
+import RandomConfessionClient from './RandomConfessionClient'
 
-// Server Component - runs on server, no client-side fetching needed
+// Server Component - fetches initial data and passes to client
 export default async function RandomConfessionServer() {
   const count = await prisma.confession.count()
   
   if (count === 0) {
     return (
-      <div className="text-center max-w-2xl">
-        <h1 className="font-cloister text-6xl text-foreground mb-8">
-          Confessions Booth
-        </h1>
-        <p className="text-xl text-gray-600 mb-8">
-          No confessions yet. Be the first to share your secrets...
-        </p>
-      </div>
+      <RandomConfessionClient 
+        initialConfession={null} 
+        hasConfessions={false} 
+      />
     )
   }
 
@@ -24,30 +20,16 @@ export default async function RandomConfessionServer() {
   `
   const confession = confessionResult[0] || null
 
+  // Convert Date to string for serialization
+  const serializedConfession = confession ? {
+    ...confession,
+    createdAt: confession.createdAt.toISOString()
+  } : null
+
   return (
-    <div className="text-center max-w-2xl">
-      <h1 className="font-cloister text-6xl text-foreground mb-8">
-        Confessions Booth
-      </h1>
-
-      <div className="bg-black/80 p-8 rounded-lg mb-8 min-h-[200px] flex items-center justify-center">
-        {confession ? (
-          <div className="text-white">
-            <p className="text-xl leading-relaxed italic">
-              &ldquo;{confession.text}&rdquo;
-            </p>
-            <p className="text-sm text-gray-400 mt-4">
-              Confessed on {new Date(confession.createdAt).toLocaleDateString()}
-            </p>
-          </div>
-        ) : (
-          <div className="text-white text-xl">No confession to display</div>
-        )}
-      </div>
-
-      <div className="space-x-4">
-        <p className="text-gray-600 text-sm">Refresh page for next confession</p>
-      </div>
-    </div>
+    <RandomConfessionClient 
+      initialConfession={serializedConfession} 
+      hasConfessions={count > 0} 
+    />
   )
 }

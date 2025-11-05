@@ -18,7 +18,7 @@ export default async function AllConfessionsServer() {
       </div>
 
       {confessions.length === 0 ? (
-        <div className="text-center p-8 bg-gray-50 rounded-lg">
+        <div className="text-center p-8 rounded-lg">
           <p className="text-gray-600">No confessions yet. Be the first to share your secrets!</p>
         </div>
       ) : (
