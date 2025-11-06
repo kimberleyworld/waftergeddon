@@ -1,5 +1,11 @@
 import { prisma } from '@/lib/prisma'
 
+interface Confession {
+  id: number;
+  text: string;
+  createdAt: Date;
+}
+
 // Server Component - fetches all confessions on server
 export default async function AllConfessionsServer() {
   const confessions = await prisma.confession.findMany({
@@ -23,7 +29,7 @@ export default async function AllConfessionsServer() {
         </div>
       ) : (
         <div className="space-y-4">
-          {confessions.map((confession) => (
+          {confessions.map((confession: Confession) => (
             <div 
               key={confession.id} 
             >
