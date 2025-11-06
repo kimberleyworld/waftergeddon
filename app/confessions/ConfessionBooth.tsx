@@ -31,8 +31,10 @@ export default function ConfessionBooth() {
     if (response.ok) {
       setSubmitted(true)
       setConfession('')
-      // Reset success message after 3 seconds
-      setTimeout(() => setSubmitted(false), 3000)
+      // Close curtains after successful submission
+      setCurtainsOpen(false)
+      // Reset form state after curtains close
+      setTimeout(() => setSubmitted(false), 1000)
     } else {
       setError('Failed to submit confession. Please try again.')
     }
@@ -71,11 +73,12 @@ export default function ConfessionBooth() {
       <div className="max-w-2xl mx-auto relative overflow-hidden min-h-screen">
         {/* Left Curtain */}
         <div
-          className={`absolute top-0 left-0 z-50 h-2/3 w-1/2 transition-transform duration-1000 ease-in-out ${
+          className={`absolute top-0 left-0 z-10 h-2/3 w-1/2 transition-transform duration-1000 ease-in-out ${
             curtainsOpen ? '' : 'translate-x-0'
           }`}
           style={{
-            transform: curtainsOpen ? 'translateX(calc(-100% + 10px))' : 'translateX(0)'
+            transform: curtainsOpen ? 'translateX(calc(-100% + 10px))' : 'translateX(0)',
+            pointerEvents: curtainsOpen ? 'none' : 'auto'
           }}
         >
           <Image
@@ -89,11 +92,12 @@ export default function ConfessionBooth() {
         
         {/* Right Curtain */}
         <div
-          className={`absolute top-0 right-0 z-50 h-2/3 w-1/2 transition-transform duration-1000 ease-in-out ${
+          className={`absolute top-0 right-0 z-10 h-2/3 w-1/2 transition-transform duration-1000 ease-in-out ${
             curtainsOpen ? '' : 'translate-x-0'
           }`}
           style={{
-            transform: curtainsOpen ? 'translateX(calc(100% - 10px))' : 'translateX(0)'
+            transform: curtainsOpen ? 'translateX(calc(100% - 10px))' : 'translateX(0)',
+            pointerEvents: curtainsOpen ? 'none' : 'auto'
           }}
         >
           <Image
@@ -109,18 +113,21 @@ export default function ConfessionBooth() {
         {!curtainsOpen && (
           <button
             onClick={() => setCurtainsOpen(true)}
-            className="border p-4 absolute top-40 left-1/2 transform -translate-x-1/2 z-[60] text-foreground px-6 py-3 hover:bg-red-700 transition-colors font-cloister text-3xl"
+            className="absolute top-40 border left-1/2 transform -translate-x-1/2 z-20 bg-gothic-red text-white py-3 transition-colors font-cloister text-3xl"
           >
             Enter the Booth
           </button>
         )}
+
+        {/* Main Content */}
+        <div className="relative">
       <div className="text-center mb-6 relative mt-20">
         <Image
           src="/images/screen.png"
           alt="Confession Screen"
           width={300}
           height={180}
-          className="absolute z-0 opacity-25"
+          className="absolute opacity-25"
           style={{ 
             top: '50%', 
             left: '50%', 
@@ -129,24 +136,13 @@ export default function ConfessionBooth() {
             WebkitMask: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
           }}
         />
-        <h2 className="font-cloister text-4xl text-foreground relative z-10">
+        <h2 className="font-cloister text-4xl text-foreground relative">
           Confession Booth
         </h2>
       </div>
 
-      {submitted ? (
-        <div className="text-center p-8">
-          <div className="text-xl mb-2">Confession has been acknowledged!</div>
-          <button
-            onClick={handleReset}
-            className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            Confess Something else?
-          </button>
-        </div>
-      ) : (
-        
-        <form onSubmit={handleSubmit} className="space-y-4 ml-5 mr-5">
+      {/* Always show the form, no success message screen */}
+      <form onSubmit={handleSubmit} className={`mr-6 ml-6 space-y-4 ${curtainsOpen ? 'relative z-20' : ''}`}>
           <div>
             <textarea
               id="confession"
@@ -183,7 +179,7 @@ export default function ConfessionBooth() {
             </button>
           </div>
         </form>
-      )}
+        </div>
       </div>
     </>
   )
