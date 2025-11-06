@@ -92,10 +92,11 @@ export default function ConfessionBooth() {
         
         {/* Right Curtain */}
         <div
-          className={`absolute top-0 right-0 z-10 h-2/3 w-1/2 transition-transform duration-1000 ease-in-out ${
+          className={`absolute top-0 z-10 h-2/3 w-2/3 transition-transform duration-1000 ease-in-out ${
             curtainsOpen ? '' : 'translate-x-0'
           }`}
           style={{
+            right: '-30px',
             transform: curtainsOpen ? 'translateX(calc(100% - 10px))' : 'translateX(0)',
             pointerEvents: curtainsOpen ? 'none' : 'auto'
           }}
