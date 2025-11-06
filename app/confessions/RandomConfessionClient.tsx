@@ -61,7 +61,7 @@ export default function RandomConfessionClient({
 
       <div className="rounded-lg min-h-[200px] flex items-center justify-center">
         {loading ? (
-          <div className="text-foreground text-xl">Loading new confession...</div>
+          <div className="text-foreground text-xl"></div>
         ) : confession ? (
           <div className="">
             <p className="text-xl leading-relaxed italic">
