@@ -1,7 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import RandomConfessionClient from './RandomConfessionClient'
 
-// Server Component - fetches initial data and passes to client
+// Server Component - fetches all confessions and passes to client
 export default async function RandomConfessionServer() {
   const count = await prisma.confession.count()
   
@@ -9,27 +9,29 @@ export default async function RandomConfessionServer() {
     return (
       <RandomConfessionClient 
         initialConfession={null} 
-        hasConfessions={false} 
+        hasConfessions={false}
+        allConfessions={[]}
       />
     )
   }
 
-  // Get random confession using database randomization
-  const confessionResult = await prisma.$queryRaw<Array<{id: number, text: string, createdAt: Date}>>`
-    SELECT * FROM "Confession" ORDER BY RANDOM() LIMIT 1
-  `
-  const confession = confessionResult[0] || null
+  // Get all confessions
+  const confessions = await prisma.confession.findMany({
+    orderBy: { id: 'asc' }
+  })
 
-  // Convert Date to string for serialization
-  const serializedConfession = confession ? {
-    ...confession,
+  // Convert Dates to strings for serialization
+  const serializedConfessions = confessions.map((confession: {id: number, text: string, createdAt: Date}) => ({
+    id: confession.id,
+    text: confession.text,
     createdAt: confession.createdAt.toISOString()
-  } : null
+  }))
 
   return (
     <RandomConfessionClient 
-      initialConfession={serializedConfession} 
-      hasConfessions={count > 0} 
+      initialConfession={serializedConfessions[0] || null} 
+      hasConfessions={count > 0}
+      allConfessions={serializedConfessions}
     />
   )
 }
