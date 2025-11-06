@@ -1,27 +1,22 @@
-import Image from 'next/image';
+import { Suspense } from 'react'
+import RandomConfessionServer from './RandomConfessionServer'
+import ConfessionBooth from './ConfessionBooth'
+import ConfessionsSkeleton from './ConfessionsSkeleton'
 
 export default function ConfessionsPage() {
   return (
-    <div className="min-h-screen p-8 flex items-center justify-center">
-        <div className="text-center">
-             <Image
-            src="/images/arrow.png"
-            alt="Under Construction"
-            width={50}
-            height={50}
-            className="mx-auto floating-stuff"
-          />
-          <h1 className="font-cloister text-6xl text-foreground mt-6 mb-8">
-            Confessions Booth Coming Soon
-          </h1>
-          <Image
-            src="/images/arrow.png"
-            alt="Under Construction"
-            width={50}
-            height={50}
-            className="mx-auto rotate-180 floating-stuff"
-          />
+    <div className="min-h-screen">
+      {/* Confession Submission Form with padding */}
+      <div className="p-8">
+        <div className="pt-16 mb-16">
+          <ConfessionBooth />
+        </div>
       </div>
+
+      {/* Random Confession Display - full width, no padding */}
+      <Suspense fallback={<ConfessionsSkeleton />}>
+        <RandomConfessionServer />
+      </Suspense>
     </div>
-  );
+  )
 }
