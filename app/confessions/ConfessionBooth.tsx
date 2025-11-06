@@ -1,5 +1,7 @@
 'use client'
 import { useState } from 'react'
+import Image from 'next/image'
+
 export default function ConfessionBooth() {
   const [confession, setConfession] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -45,8 +47,22 @@ export default function ConfessionBooth() {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="text-center mb-8">
-        <h2 className="font-cloister text-4xl text-foreground mb-2">
+      <div className="text-center mb-6 relative">
+        <Image
+          src="/images/screen.png"
+          alt="Confession Screen"
+          width={300}
+          height={180}
+          className="absolute z-0 opacity-25"
+          style={{ 
+            top: '50%', 
+            left: '50%', 
+            transform: 'translate(-50%, -20%)',
+            mask: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
+            WebkitMask: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
+          }}
+        />
+        <h2 className="font-cloister text-4xl text-foreground relative z-10">
           Confession Booth
         </h2>
       </div>
@@ -62,6 +78,7 @@ export default function ConfessionBooth() {
           </button>
         </div>
       ) : (
+        
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <textarea
