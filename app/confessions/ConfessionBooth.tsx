@@ -44,7 +44,7 @@ export default function ConfessionBooth() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="max-w-2xl mx-auto">
       <div className="text-center mb-8">
         <h2 className="font-cloister text-4xl text-foreground mb-2">
           Confession Booth
@@ -69,7 +69,7 @@ export default function ConfessionBooth() {
               value={confession}
               onChange={(e) => setConfession(e.target.value)}
               className="w-full p-4 border focus:outline-none resize-none"
-              rows={6}
+              rows={3}
               placeholder="What&apos;s weighing on your soul? Completely anonymous. Max 500 characters."
               maxLength={500}
               required
@@ -87,7 +87,7 @@ export default function ConfessionBooth() {
               type="submit"
               className="flex-1 text-foreground py-3 px-6 border transition-colors text-lg font-medium"
             >
-              {isSubmitting ? 'Confessing...' : 'Submit Confession'}
+              {isSubmitting ? 'Confessing...' : 'Submit'}
             </button>
             
             <button

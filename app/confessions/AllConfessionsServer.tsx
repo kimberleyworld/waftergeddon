@@ -12,25 +12,24 @@ export default async function AllConfessionsServer() {
         <h3 className="font-cloister text-3xl text-foreground mb-2">
           All Confessions
         </h3>
-        <p className="text-gray-600">
+        <p className="text-gothic-red">
           {confessions.length} {confessions.length === 1 ? 'confession' : 'confessions'} shared so far
         </p>
       </div>
 
       {confessions.length === 0 ? (
         <div className="text-center p-8 rounded-lg">
-          <p className="text-gray-600">No confessions yet. Be the first to share your secrets!</p>
+          <p className="text-foreground">No confessions yet. Be the first to share your secrets!</p>
         </div>
       ) : (
         <div className="space-y-4">
           {confessions.map((confession) => (
             <div 
               key={confession.id} 
-              className="p-6 "
             >
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-2">
                 <div className="flex-1">
-                  <p className="text-gray-800 leading-relaxed mb-3">
+                  <p className="text-foreground leading-relaxed mb-3">
                     &ldquo;{confession.text}&rdquo;
                   </p>
                 </div>

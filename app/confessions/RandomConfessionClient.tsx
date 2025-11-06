@@ -44,7 +44,7 @@ export default function RandomConfessionClient({
           className="mx-auto floating-stuff mb-6"
         />
         <h1 className="font-cloister text-6xl text-foreground mb-8">
-          Confessions Booth
+          Confessions
         </h1>
         <p className="text-xl text-gray-600 mb-8">
           No confessions yet. Be the first to share your secrets...
@@ -54,29 +54,18 @@ export default function RandomConfessionClient({
   }
 
   return (
-    <div className="text-center max-w-2xl">
-      <Image
-        src="/images/arrow.png"
-        alt="Confession"
-        width={50}
-        height={50}
-        className="mx-auto floating-stuff mb-6"
-      />
-      
+    <div className="text-center max-w-2xl">     
       <h1 className="font-cloister text-6xl text-foreground mb-8">
-        Confessions Booth
+        Confessions
       </h1>
 
-      <div className="bg-black/80 p-8 rounded-lg mb-8 min-h-[200px] flex items-center justify-center">
+      <div className="rounded-lg min-h-[200px] flex items-center justify-center">
         {loading ? (
-          <div className="text-white text-xl">Loading new confession...</div>
+          <div className="text-foreground text-xl">Loading new confession...</div>
         ) : confession ? (
-          <div className="text-white">
+          <div className="">
             <p className="text-xl leading-relaxed italic">
-              &ldquo;{confession.text}&rdquo;
-            </p>
-            <p className="text-sm text-gray-400 mt-4">
-              Confessed on {new Date(confession.createdAt).toLocaleDateString()}
+              &ldquo; {confession.text} &rdquo;
             </p>
           </div>
         ) : (
@@ -85,22 +74,15 @@ export default function RandomConfessionClient({
       </div>
 
       <div className="space-x-4">
-        <button
+        <Image
+          src="/images/arrow.png"
+          alt="Next Confession"
+          width={50}
+          height={50}
           onClick={fetchRandomConfession}
-          disabled={loading}
-          className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 disabled:opacity-50 transition-colors font-medium"
-        >
-          {loading ? 'Loading...' : 'Next Confession'}
-        </button>
+          className="mx-auto cursor-pointer hover:opacity-70 transition-opacity rotate-270"
+        />
       </div>
-
-      <Image
-        src="/images/arrow.png"
-        alt="Next"
-        width={50}
-        height={50}
-        className="mx-auto rotate-180 floating-stuff mt-6"
-      />
     </div>
   )
 }
