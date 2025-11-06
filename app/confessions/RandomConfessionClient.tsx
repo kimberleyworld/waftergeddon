@@ -35,16 +35,6 @@ export default function RandomConfessionClient({
     return shuffled
   }
 
-  // Initialize with shuffled confessions
-  useState(() => {
-    if (allConfessions.length > 0) {
-      const shuffled = shuffleArray(allConfessions)
-      setConfessions(shuffled)
-      setConfession(shuffled[0])
-      setCurrentIndex(0)
-    }
-  })
-
   const fetchRandomConfession = useCallback(() => {
     if (confessions.length === 0) return
     
@@ -87,34 +77,47 @@ export default function RandomConfessionClient({
   }
 
   return (
-    <div className="text-center max-w-2xl">     
-      <h1 className="font-cloister text-6xl text-foreground mb-8">
-        Confessions
-      </h1>
+    <div className="min-h-screen flex items-center justify-center relative">
+      {/* Background image that covers full width and height */}
+      <div 
+        className="absolute inset-0 z-0 opacity-20"
+        style={{
+          backgroundImage: 'url(/images/ross_img.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      
+      <div className="text-center max-w-2xl relative z-10">
+        <h1 className="font-cloister text-6xl text-foreground mb-8">
+          Confessions
+        </h1>
 
-      <div className="rounded-lg min-h-[200px] flex items-center justify-center">
-        {loading ? (
-          <div className="text-foreground text-xl"></div>
-        ) : confession ? (
-          <div className="">
-            <p className="text-xl leading-relaxed italic">
-              &ldquo; {confession.text} &rdquo;
-            </p>
-          </div>
-        ) : (
-          <div className="text-white text-xl">No confession to display</div>
-        )}
-      </div>
+        <div className="min-h-[100px] flex items-center justify-center px-8 text-foreground">
+          {loading ? (
+            <div className="text-foreground text-xl"></div>
+          ) : confession ? (
+            <div className="text-foreground">
+              <p className="text-xl leading-relaxed italic text-foreground">
+                &ldquo; {confession.text} &rdquo;
+              </p>
+            </div>
+          ) : (
+            <div className="text-foreground text-xl">No confession to display</div>
+          )}
+        </div>
 
-      <div className="space-x-4">
-        <Image
-          src="/images/arrow.png"
-          alt="Next Confession"
-          width={50}
-          height={50}
-          onClick={fetchRandomConfession}
-          className="mx-auto cursor-pointer hover:opacity-70 transition-opacity rotate-270"
-        />
+        <div className="space-x-4">
+          <Image
+            src="/images/arrow.png"
+            alt="Next Confession"
+            width={30}
+            height={30}
+            onClick={fetchRandomConfession}
+            className="mx-auto cursor-pointer hover:opacity-70 transition-opacity rotate-270"
+          />
+        </div>
       </div>
     </div>
   )

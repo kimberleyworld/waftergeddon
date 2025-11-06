@@ -5,19 +5,18 @@ import ConfessionsSkeleton from './ConfessionsSkeleton'
 
 export default function ConfessionsPage() {
   return (
-    <div className="min-h-screen p-8">
-
-      {/* Confession Submission Form*/}
-      <div className="pt-16 mb-16">
-        <ConfessionBooth />
+    <div className="min-h-screen">
+      {/* Confession Submission Form with padding */}
+      <div className="p-8">
+        <div className="pt-16 mb-16">
+          <ConfessionBooth />
+        </div>
       </div>
 
-      {/* Random Confession Display with Skeleton */}
-      <div className="flex items-center justify-center mb-16 mt-20">
-        <Suspense fallback={<ConfessionsSkeleton />}>
-          <RandomConfessionServer />
-        </Suspense>
-      </div>
+      {/* Random Confession Display - full width, no padding */}
+      <Suspense fallback={<ConfessionsSkeleton />}>
+        <RandomConfessionServer />
+      </Suspense>
     </div>
   )
 }
