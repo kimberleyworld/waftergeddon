@@ -97,7 +97,7 @@ export default function ConfessionBooth() {
           }`}
           style={{
             right: '-30px',
-            transform: curtainsOpen ? 'translateX(calc(100% - 60px))' : 'translateX(0)',
+            transform: curtainsOpen ? 'translateX(calc(100% - 50px))' : 'translateX(0)',
             pointerEvents: curtainsOpen ? 'none' : 'auto'
           }}
         >
