@@ -1,13 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
+interface RouteContext {
+  params: Promise<{ id: string }>
+}
+
 // GET /api/confessions/[id] - Get a specific confession
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  context: RouteContext
 ) {
   try {
-    const { id: idParam } = await params
+    const { id: idParam } = await context.params
     const id = parseInt(idParam)
     
     if (isNaN(id)) {
@@ -41,10 +45,10 @@ export async function GET(
 // DELETE /api/confessions/[id] - Delete a specific confession
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  context: RouteContext
 ) {
   try {
-    const { id: idParam } = await params
+    const { id: idParam } = await context.params
     const id = parseInt(idParam)
     
     if (isNaN(id)) {
