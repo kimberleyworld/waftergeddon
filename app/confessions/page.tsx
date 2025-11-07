@@ -3,6 +3,9 @@ import RandomConfessionServer from './RandomConfessionServer'
 import ConfessionBooth from './ConfessionBooth'
 import ConfessionsSkeleton from './ConfessionsSkeleton'
 
+// Disable caching to ensure fresh confessions
+export const revalidate = 0
+
 export default function ConfessionsPage() {
   return (
     <div className="min-h-screen">
