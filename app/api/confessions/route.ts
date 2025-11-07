@@ -5,7 +5,13 @@ export async function GET() {
   const confessions = await prisma.confession.findMany({
     orderBy: { createdAt: 'desc' }
   })
-  return NextResponse.json(confessions)
+  return NextResponse.json(confessions, {
+    headers: {
+      'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0'
+    }
+  })
 }
 
 export async function POST(request: NextRequest) {

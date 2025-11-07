@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "dotenv -e .env.local -- next dev",
+    "dev-no-turbo": "set TURBOPACK=0 && dotenv -e .env.local -- next dev",
     "build": "dotenv -e .env.local -- prisma generate && dotenv -e .env.local -- next build",
     "start": "next start",
     "lint": "eslint",

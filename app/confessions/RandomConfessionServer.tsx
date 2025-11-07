@@ -1,6 +1,9 @@
 import { prisma } from '@/lib/prisma'
 import RandomConfessionClient from './RandomConfessionClient'
 
+// Disable caching to ensure fresh data
+export const revalidate = 0
+
 // Server Component - fetches all confessions and passes to client
 export default async function RandomConfessionServer() {
   const count = await prisma.confession.count()

@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
 export default function ConfessionBooth() {
@@ -8,6 +9,7 @@ export default function ConfessionBooth() {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
   const [curtainsOpen, setCurtainsOpen] = useState(false)
+  const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -35,6 +37,8 @@ export default function ConfessionBooth() {
       setCurtainsOpen(false)
       // Reset form state after curtains close
       setTimeout(() => setSubmitted(false), 1000)
+      // Force refresh to show new confession
+      router.refresh()
     } else {
       setError('Failed to submit confession. Please try again.')
     }
