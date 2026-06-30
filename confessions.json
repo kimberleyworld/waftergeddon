@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "text": "confession one",
+    "createdAt": "2025-06-15T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "text": "confession two",
+    "createdAt": "2025-06-16T14:20:00Z"
+  },
+  {
+    "id": 3,
+    "text": "confession three",
+    "createdAt": "2025-06-17T09:45:00Z"
+  },
+  {
+    "id": 4,
+    "text": "confession four",
+    "createdAt": "2025-06-18T16:15:00Z"
+  },
+  {
+    "id": 5,
+    "text": "confession five",
+    "createdAt": "2025-06-19T11:00:00Z"
+  }
+]
